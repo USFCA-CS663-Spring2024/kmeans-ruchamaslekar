@@ -1,5 +1,5 @@
 # kmeans.py
-from cluster import Cluster
+from cluster import cluster
 import numpy as np
 
 class KMeans(Cluster):
