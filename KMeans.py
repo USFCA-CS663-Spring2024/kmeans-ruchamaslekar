@@ -2,7 +2,7 @@
 from cluster import cluster
 import numpy as np
 
-class KMeans(Cluster):
+class KMeans(cluster):
     def __init__(self, k=5, max_iterations=100):
         super().__init__()
         self.k = k
