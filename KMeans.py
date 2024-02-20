@@ -11,17 +11,17 @@ class KMeans(cluster):
     def fit(self, X):
         X = np.array(X)
 
-        # Initialize centroids randomly
+        # Initializing the centroids randomly
         centroids = X[np.random.choice(X.shape[0], self.k, replace=False)]
 
         for _ in range(self.max_iterations):
-            # Assign each instance to the closest centroid
+            # Assigning each instance to the closest centroid
             labels = np.argmin(np.linalg.norm(X[:, np.newaxis] - centroids, axis=2), axis=1)
 
-            # Update centroids based on mean of assigned instances
+            # Updating centroids based on mean of assigned instances
             new_centroids = np.array([X[labels == i].mean(axis=0) for i in range(self.k)])
 
-            # Check for convergence
+            # Checking for convergence
             if np.all(centroids == new_centroids):
                 break
 
