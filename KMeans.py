@@ -26,4 +26,4 @@ class KMeans(Cluster):
                 break
 
             centroids = new_centroids
-           return cluster_hypotheses.tolist(), centroids.tolist()
+           return labels.tolist(), centroids.tolist())
